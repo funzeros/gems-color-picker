@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+:root {
+  --color-primary: #1dd7f8;
+  --grid-small: 40px;
+  --cb-t: cubic-bezier(0, 1.97, 0.7, 0.53);
+}
+
+.v-h {
+  visibility: hidden;
+}
+.c-p {
+  cursor: pointer;
+}
+.no-event {
+  pointer-events: none;
+}
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-c {
+  justify-content: center;
+}
+.hover-case:hover {
+  box-shadow: 0 0 2vw 0 #ffff00 inset;
+  animation: hue-rotate 5s infinite;
+}
+
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.hover-bigger,
+.hover-bigger-child > * {
+  transition: transform 300ms var(--cb-t);
+}
+.hover-bigger:hover,
+.hover-bigger-child:hover > * {
+  transform: scale(1.1);
+}
+.hover-zindex:hover {
+  z-index: 9;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.message {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 18px;
+  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 5px #fff;
+  animation: fade 1s ease-out forwards;
+  pointer-events: none;
+}
+
+.message span {
+  padding: 0 10px;
+  border-radius: 5px;
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+.basic-scroll::-webkit-scrollbar,
+.basic-scroll-child-div > div::-webkit-scrollbar {
+  border-radius: 4px;
+  width: 10px;
+  height: 10px;
+}
+.basic-scroll::-webkit-scrollbar-track,
+.basic-scroll-child-div > div::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #666;
+}
+.basic-scroll::-webkit-scrollbar-thumb,
+.basic-scroll-child-div > div::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #aaa;
+}
